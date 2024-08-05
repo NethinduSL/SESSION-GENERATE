@@ -145,6 +145,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Arial', sans-serif; /* Updated to sans-serif font */
   animation: typing 12s steps(8, end) infinite, blinkTextCursor 500ms steps(8, end) infinite;
   z-index: 0; /* Ensures it stays behind the main content */
 }
@@ -176,6 +177,18 @@
   }
   100% {
     width: 0;
+  }
+}
+
+@keyframes blinkTextCursor {
+  0% {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  50% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-right-color: rgba(0, 0, 0, 0.75);
   }
 }
 

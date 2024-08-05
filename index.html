@@ -12,17 +12,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 75vh;
-        flex-direction: column;
-        background-color: #000;
+        min-height: 100vh;
+        background: url('https://telegra.ph/file/95b5eb185ba71408561d2.png') no-repeat center center fixed;
+        background-size: cover;
         color: #fff;
+        margin: 0;
+        overflow: hidden;
       }
       #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        animation: fadeIn 2s ease-in-out;
       }
       h1 {
         font-size: 200%;
         letter-spacing: 0.05em;
+        animation: slideInFromTop 1s ease-in-out;
       }
       .h {
         font-family: "Montserrat Medium";
@@ -70,6 +78,7 @@
         backdrop-filter: blur(10px);
         transition: background 0.3s, color 0.3s;
         margin: 10px 0;
+        animation: popUp 1s ease-in-out;
       }
       .button:hover {
         background: rgba(255, 255, 255, 0.3);
@@ -80,11 +89,46 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.7);
         text-align: center;
         padding: 10px;
-        color: #333;
+        color: #fff;
         font-size: 14px;
+        animation: slideUp 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideInFromTop {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes popUp {
+        from {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -105,7 +149,7 @@
       <button onclick="location.href='www.youtube.com/mechstrike'" class="button">YOUTUBE</button>
     </div>
     <footer>
-      <p>© 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ᳆⃞⃚🇱🇰ʀͥᴇᷧᴀͫʟ⃟ 𝙴𝙻𝙸𝚃𝙴-𝚖𝚍</p>
+      <p>🇱🇰 BY BIT X TEAM</p>
     </footer>
   </body>
 </html>
